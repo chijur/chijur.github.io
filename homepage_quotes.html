@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章切り抜き - Your Name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Your Name</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="about.html">自己紹介</a></li>
+                <li><a href="blog.html">ブログ</a></li>
+                <li><a href="quotes.html" class="active">文章切り抜き</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="quotes-section">
+            <div class="container">
+                <h1>文章切り抜き</h1>
+                <p>読書や学習で出会った印象深い文章をまとめています。</p>
+                
+                <div class="quotes-grid">
+                    <div class="quote-card">
+                        <div class="quote-content">
+                            <blockquote>
+                                "プログラミングは芸術である。コードは詩であり、アルゴリズムは音楽である。"
+                            </blockquote>
+                            <div class="quote-source">
+                                <p><strong>出典:</strong> 『プログラマーの心得』</p>
+                                <p><strong>著者:</strong> 田中一郎</p>
+                                <p><strong>日付:</strong> 2025年8月20日</p>
+                            </div>
+                        </div>
+                        <div class="quote-note">
+                            <h4>メモ</h4>
+                            <p>プログラミングを創造的な活動として捉える視点が印象的でした。単なる論理の組み立てではなく、美しさや表現性も重要だということを改めて感じました。</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-card">
+                        <div class="quote-content">
+                            <blockquote>
+                                "学習において最も重要なのは、知らないことを知らないと認識することである。無知の知こそが成長の第一歩となる。"
+                            </blockquote>
+                            <div class="quote-source">
+                                <p><strong>出典:</strong> 『効率的学習法』</p>
+                                <p><strong>著者:</strong> 佐藤花子</p>
+                                <p><strong>日付:</strong> 2025年8月15日</p>
+                            </div>
+                        </div>
+                        <div class="quote-note">
+                            <h4>メモ</h4>
+                            <p>ソクラテスの「無知の知」の現代的な解釈。プログラミング学習においても、自分が何を知らないかを明確にすることで、効率的に学習を進められると感じました。</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-card">
+                        <div class="quote-content">
+                            <blockquote>
+                                "技術は手段であって目的ではない。大切なのは、その技術で何を実現したいかという想いである。"
+                            </blockquote>
+                            <div class="quote-source">
+                                <p><strong>出典:</strong> 『テクノロジーと人間』</p>
+                                <p><strong>著者:</strong> 山田太郎</p>
+                                <p><strong>日付:</strong> 2025年8月10日</p>
+                            </div>
+                        </div>
+                        <div class="quote-note">
+                            <h4>メモ</h4>
+                            <p>新しい技術を学ぶ際に、ついその技術自体に夢中になってしまうことがありますが、本当に大切なのは「なぜその技術が必要なのか」という目的意識なのだと気づかされました。</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-card">
+                        <div class="quote-content">
+                            <blockquote>
+                                "失敗は終わりではない。失敗は学習の機会であり、成長への扉である。"
+                            </blockquote>
+                            <div class="quote-source">
+                                <p><strong>出典:</strong> 『挑戦する心』</p>
+                                <p><strong>著者:</strong> 鈴木次郎</p>
+                                <p><strong>日付:</strong> 2025年8月05日</p>
+                            </div>
+                        </div>
+                        <div class="quote-note">
+                            <h4>メモ</h4>
+                            <p>バグが発生したり、コードが期待通りに動かなかったりする時に、この言葉を思い出すようにしています。失敗から学ぶことで、より良いプログラマーになれると信じています。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-quotes">
+                    <h3>切り抜きを検索</h3>
+                    <input type="text" placeholder="キーワードで検索..." class="search-input">
+                    <div class="filter-tags">
+                        <button class="filter-tag active" data-category="all">すべて</button>
+                        <button class="filter-tag" data-category="programming">プログラミング</button>
+                        <button class="filter-tag" data-category="learning">学習</button>
+                        <button class="filter-tag" data-category="philosophy">哲学</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // 簡単な検索・フィルター機能
+        const searchInput = document.querySelector('.search-input');
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const quoteCards = document.querySelectorAll('.quote-card');
+
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                filterTags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+                
+                const category = tag.dataset.category;
+                quoteCards.forEach(card => {
+                    if (category === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        // 実際の実装では、カードにカテゴリーのdata属性を追加する必要があります
+                        card.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            quoteCards.forEach(card => {
+                const content = card.textContent.toLowerCase();
+                card.style.display = content.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

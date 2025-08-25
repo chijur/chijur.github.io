@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ - Your Name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Your Name</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="about.html">自己紹介</a></li>
+                <li><a href="blog.html" class="active">ブログ</a></li>
+                <li><a href="quotes.html">文章切り抜き</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-section">
+            <div class="container">
+                <h1>ブログ</h1>
+                <p>日々の学習や思考について書いています。</p>
+                
+                <div class="blog-posts">
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span class="post-date">2025年8月20日</span>
+                            <span class="post-category">プログラミング</span>
+                        </div>
+                        <h2><a href="blog/post3.html">JavaScriptの非同期処理について学んだこと</a></h2>
+                        <p>最近非同期処理について深く学習する機会があり、Promise、async/await、そしてイベントループについて理解が深まりました。特に...</p>
+                        <a href="blog/post3.html" class="read-more">続きを読む</a>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span class="post-date">2025年8月15日</span>
+                            <span class="post-category">日常</span>
+                        </div>
+                        <h2><a href="blog/post2.html">新しい学習方法を試してみた感想</a></h2>
+                        <p>効率的な学習方法について調べていたところ、ポモドーロテクニックとアクティブラーニングを組み合わせた手法を発見しました...</p>
+                        <a href="blog/post2.html" class="read-more">続きを読む</a>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span class="post-date">2025年8月10日</span>
+                            <span class="post-category">技術</span>
+                        </div>
+                        <h2><a href="blog/post1.html">GitHub Pagesでホームページを作成した話</a></h2>
+                        <p>個人ホームページを作成したいと思い、GitHub Pagesを使って無料でホスティングすることにしました。セットアップから公開まで...</p>
+                        <a href="blog/post1.html" class="read-more">続きを読む</a>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <span class="page-current">1</span>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-next">次へ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
